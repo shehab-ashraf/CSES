@@ -8,9 +8,10 @@
 you are given a positive integer n. If n is even, the algorithm divides it by two, and if n is odd,
 the algorithm multiplies it by three and adds one. The algorithm repeats this, until n is one. 
 
-Example : n = 3
+Example
 ~~~
-3 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+input : n = 3
+output : 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1
 ~~~
 
 Your task is to simulate the execution of the algorithm for a given value of n.
