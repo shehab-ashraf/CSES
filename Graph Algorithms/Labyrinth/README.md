@@ -112,3 +112,6 @@ int main() {
     return 0;
 }
 ~~~
+
+time complexity : O(NxM)\
+sapce complexity : O(NxM)
