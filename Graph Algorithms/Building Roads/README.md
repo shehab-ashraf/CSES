@@ -26,12 +26,11 @@ If we separate the cities by groups where each group is only composed of cities 
 The image above contains 2 groups and only requires one connection to make every city reachable from each other.so, we can say we have an unconnected graph and we want to convert it to a fully connected graph.<br/>
 <br/>
 
-To solve this problem, we could use an algorithm like depth-first search to recursively traverse all the nodes in each group and mark them as visited.so, we should be able to count the number of groups. Knowing the number of groups is crucial since the idea behind the solution is to connect the groups.
-
+To solve this problem, we could use an algorithm like depth-first search to recursively traverse all the nodes in each group and mark them as visited.
 
 The next step is to find which nodes we should connect. One way of finding out is to choose the nodes that weren't yet visited in the iteration process. As unvisited nodes weren't explored by the depth-first search algorithm, we can assume it belongs to a new road.
 
-code 
+#### code 
 ~~~C++
 #include <bits/stdc++.h>
 using namespace std;
@@ -73,3 +72,11 @@ int main() {
     }
 }
 ~~~
+
+time complexity : O(n+m)<br/>
+>Clearly DFS(city) is called for each city only one if visited(city)==false. The moment it's called, visited(city) is set to true. Therefore the DFS(city) cannot be called more than once for any city. Furthermore, the loop "for all cities...DFS(city)" ensures that it will be called for every city at least once.<br/>
+The body of the "for all connectedCity" (in DFS fun) loop is executed exactly once for each edge (city1,city2) in the graph.<br/>
+bDFS(city) is called exactly once. And the body of the loop is executed once for all the edges.<br/>
+bTherefore the running time of the DFS algorithm is O(n+m).<br/>
+
+space complexity : O(n)
