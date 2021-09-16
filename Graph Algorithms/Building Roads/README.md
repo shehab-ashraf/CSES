@@ -74,9 +74,9 @@ int main() {
 ~~~
 
 time complexity : O(n+m)<br/>
->Clearly DFS(city) is called for each city only one if visited(city)==false. The moment it's called, visited(city) is set to true. Therefore the DFS(city) cannot be called more than once for any city. Furthermore, the loop "for all cities...DFS(city)" ensures that it will be called for every city at least once.<br/>
+>DFS(city) is called for each city only one if visited(city)==false. The moment it's called, visited(city) is set to true. Therefore the DFS(city) cannot be called more than once for any city. Furthermore, the loop "for all cities...DFS(city)" ensures that it will be called for every city at least once.<br/>
 The body of the "for all connectedCity" (in DFS fun) loop is executed exactly once for each edge (city1,city2) in the graph.<br/>
-bDFS(city) is called exactly once. And the body of the loop is executed once for all the edges.<br/>
-bTherefore the running time of the DFS algorithm is O(n+m).<br/>
+DFS(city) is called exactly once. And the body of the loop is executed once for all the edges.<br/>
+Therefore the running time of the DFS algorithm is O(n+m).<br/>
 
 space complexity : O(n+m)
