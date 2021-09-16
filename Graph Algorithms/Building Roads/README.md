@@ -79,4 +79,4 @@ The body of the "for all connectedCity" (in DFS fun) loop is executed exactly on
 bDFS(city) is called exactly once. And the body of the loop is executed once for all the edges.<br/>
 bTherefore the running time of the DFS algorithm is O(n+m).<br/>
 
-space complexity : O(n)
+space complexity : O(n+m)
