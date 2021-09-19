@@ -52,16 +52,15 @@ int BFS(vector<vector<int>>& graph , vector<int>& visited , int n , int m , vect
     q.push({1,1});
     visited[1] = 1;
     while(!q.empty()) {
-        auto computer = q.front();
-        int connectedComputer = computer.first;
-        int Distance = computer.second;
+        int computer = q.front().first;
+        int Distance = q.front().second;
         q.pop();
-        for(int idx = 0  ; idx < graph[connectedComputer].size() ; idx++) {
-            if(visited[graph[connectedComputer][idx]] == 0) {
-                parent[graph[connectedComputer][idx]] = connectedComputer;
-                if(graph[connectedComputer][idx] == n) { cout << Distance+1 << endl ; return 1;}
-                q.push({graph[connectedComputer][idx],Distance+1});
-                visited[graph[connectedComputer][idx]] = 1;
+        for(int idx = 0  ; idx < graph[computer].size() ; idx++) {
+            if(visited[graph[computer][idx]] == 0) {
+                parent[graph[computer][idx]] = computer;
+                if(graph[computer][idx] == n) { cout << Distance+1 << endl ; return 1;}
+                q.push({graph[computer][idx],Distance+1});
+                visited[graph[computer][idx]] = 1;
             }
         }
     }
@@ -100,5 +99,5 @@ int main() {
 ~~~
 
 time complexity : O(n+m)<br/>
-space complexity : O(n+m)
+space complexity : O(n)
 
