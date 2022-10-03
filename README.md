@@ -6,18 +6,5 @@ The [CSES Problem Set](https://cses.fi/problemset/list/) is a collection of comp
  
 ---
 
-### Introductory
-| First Header             | Second Header           |
-| ------------------------ | ------------------------|
-| Content Cell             | Content Cell            |
-| Content Cell             | Content Cell            |
-
-
-
-### Graph Algorithms
-| First Header             | Second Header           |
-| ------------------------ | ------------------------|
-| Content Cell             | Content Cell            |
-| Content Cell             | Content Cell            |
 
 
